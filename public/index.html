@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Учёт заявок</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Система учёта заявок</h1>
+
+    <form id="request-form" class="form">
+      <input type="text" id="clientName" placeholder="Имя клиента" required />
+      <input type="text" id="phone" placeholder="Телефон" required />
+
+      <select id="service" required>
+        <option value="">Выберите услугу</option>
+        <option>Ремонт окон</option>
+        <option>Утепление балкона</option>
+        <option>Замена замков</option>
+        <option>Ремонт под ключ</option>
+      </select>
+
+      <select id="status" required>
+        <option value="">Выберите статус</option>
+        <option>Новая</option>
+        <option>В работе</option>
+        <option>Завершена</option>
+      </select>
+
+      <button type="submit">Добавить заявку</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Клиент</th>
+          <th>Телефон</th>
+          <th>Услуга</th>
+          <th>Статус</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody id="request-table-body"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
